@@ -1,0 +1,135 @@
+body {
+    color: rgb(10, 10, 10);
+    text-align: center;
+}
+
+/* navbar */
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* index */
+#indice_cover {
+    background-image: url('../img/cover2.png');
+    background-color: rgba(255, 255, 255, 0.5);
+
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+
+#ns {
+    color:black;
+    text-shadow: -1px -1px 0px  white;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+#indice_p {
+    color:black;
+    text-shadow: -1px -1px 0px  white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-custom {
+    background-color: #703fbe;
+    color: white;
+    border: 2px solid #703fbe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-custom:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+    color: white;
+}
+
+.btn-custom:focus,
+.btn-custom:active {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+/* detail_flan */
+
+
+/* about */
+h6 {
+    color: #380786;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: bold;
+    font-size:60px;
+}
+#acerca {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: bold;
+    font-size:60px;
+}
+
+/* login */
+form{
+    background-image: url('../img/cover2.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    margin: 2px;
+    border-radius: 4px;
+    background-blend-mode: overlay;
+    font-weight: bold;
+    align-items: center;
+
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px; 
+    width: 100%;
+    font-size: 20px;
+
+}
+
+td {
+    padding: 10px; 
+}
+
+/* contactus */
+#contactanos {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: bold;
+    font-size:60px;
+    
+  }
+/* perfil */
+#perfil {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: bold;
+    font-size:60px;
+    
+}
+
+  /* detail */
+
+/* footer */
+#credito {
+    margin-top: 3rem;
+    background-color: #9782b9;
+    font-size: 1rem;
+    height: 4rem;
+    padding: 1rem;
+
+
+}

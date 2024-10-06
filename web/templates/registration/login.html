@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+  {% if form.errors %}
+    <p style="color: red;"> * Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p style="color: red;">Su cuenta no tiene acceso a esta página. Para continuar,
+      inicie sesión con una cuenta que tenga acceso.</p>
+    {% else %}
+      <p style="color: red;">Por favor inicie sesión para ver esta página.</p>
+    {% endif %}
+  {% endif %}
+<div class="mb-3 text-center" style= "display: flex; flex-direction: column;align-items: center; margin-top: 3em;">
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    
+    <table style= "text">
+      <tr>
+        <td>{{ form.username.label_tag }}</td>
+        <td>{{ form.username }}</td>
+      </tr>
+      
+      <tr>
+        <td>{{ form.password.label_tag }}</td>
+        <td>{{ form.password }}</td>
+      </tr>
+    </table>
+    
+    <input id="login" type="submit" value="Iniciar Sesión" class="enviar connectiontooltip" data-bs-toggle="tooltip" title="Iniciar sesión" style="background-color: #703fbe; color: white; margin-top:1em;border-radius: 50px;">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+</div>
+</div>
+{% endblock %}

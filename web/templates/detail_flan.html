@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="container px-3 text-center py-5 my-5" >
+    <div class="row justify-content-center mb-5">
+      <div class="col-10 col-md-2 px-0 shadow-lg">
+        <img class="img-fluid w-100 h-100" src="{{ flan.image_url }}" alt="{{ flan.name }}" />
+      </div>
+      <div class="col-10 col-md-6 text-center d-flex flex-column px-0 shadow-lg">
+        <div class="border-bottom border-info py-3">
+          <span class="fw-bold h1">{{ flan.name }}</span>
+        </div>
+        <p class="fs-6 flex-grow-1 text-end px-2">
+          <b>Ingredientes:</b> {{ flan.ingredients }}
+        </p>
+        <p class="fs-6 flex-grow-1 text-end px-2">
+          <b>Descripción:</b> {{ flan.description }}
+        </p>
+        <div class="mt-auto">
+          <!-- <p class="fs-4 fw-bold my-0" style="background-color:rgb(210, 224, 243);">$ {{ flan.precio }}</p> -->
+          <p class="fs-4 fw-bold my-0" style="background-color:rgb(210, 224, 243);">Precio: ${{ flan.price }} PCL</p>
+          <p class="fs-4 fw-bold my-0" style="background-color:rgb(210, 224, 243);">Porción: {{ flan.portion }}</p>
+          <p class="fs-4 fw-bold my-0" style="background-color:rgb(210, 224, 243);">Stock: {{ flan.stock }} unidades</p>
+        </div>
+      </div>
+    </div>
+    <div id="botones" class="mt-auto">
+      <div class="d-flex justify-content-center mt-3">
+        <a href="{% url 'indice' %}" class="btn btn-secondary py-2 fw-bold mt-2 d-block mx-auto"><i class="fa-solid fa-house">Flanes públicos</i></a>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+        {% if user.is_authenticated %}
+          <a href="{% url 'bienvenido' %}" class="btn btn-secondary py-2 fw-bold mt-2 d-block mx-auto"><i class="fa-solid fa-house">Flanes exclusivos</i></a>
+        {% else %}
+          <div class="alert alert-info mt-3" role="alert">
+            <i class="fa-solid fa-info-circle"></i> Para acceder a flanes exclusivos, por favor <a href="{% url 'login' %}" class="alert-link">inicia sesión</a>.
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

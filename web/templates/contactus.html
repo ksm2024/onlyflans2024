@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container">
+    <div class="col-12 col-md-6 offset-0 offset-md-3 mt-4 mb-4">
+      <h3 id="contactanos" class="text-center" >Contáctanos</h3>
+
+      <form method="post" action="{% url 'contacto' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="mb-3 text-center" style="display: flex; flex-direction: column;">
+          <label for="{{ form.customer_name.id_for_label }}" class="form-label">{{ form.customer_name.label_tag }}</label>
+          {{ form.customer_name }}
+          <div class="text-danger">{{ form.customer_name.errors }}</div>
+        </div>
+
+        <div class="mb-3 text-center" style="display: flex; flex-direction: column;">
+          <label for="{{ form.customer_email.id_for_label }}" class="form-label">{{ form.customer_email.label_tag }}</label>
+          {{ form.customer_email }}
+          <div class="text-danger">{{ form.customer_email.errors }}</div>
+        </div>
+
+        <div class="mb-3 text-center" style="display: flex; flex-direction: column;">
+          <label for="{{ form.phone_number.id_for_label }}" class="form-label">{{ form.phone_number.label_tag }}</label>
+          {{ form.phone_number }}
+          <div class="text-danger">{{ form.phone_number.errors }}</div>
+        </div>
+
+        <div class="mb-3 text-center" style="display: flex; flex-direction: column;">
+          <label for="{{ form.message.id_for_label }}" class="form-label">{{ form.message.label_tag }}</label>
+          {{ form.message }}
+          <div class="text-danger">{{ form.message.errors }}</div>
+        </div>
+
+        <div class="text-center">
+          <input type="submit" value="Enviar" class="enviar connectiontooltip" data-bs-toggle="tooltip" title="Enviar un mensaje" style="background-color: #703fbe; color: white; margin-top: 1rem;border-radius: 50px;" />
+        </div>
+      </form>
+
+   
+    </div>
+  </div>
+{% endblock %}

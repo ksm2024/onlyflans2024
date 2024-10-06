@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %} 
+<div class="container" id="acer">
+  <h2 id="acerca">Acerca de nosotros</h2>
+  <h6>Nuestra Pasión por los Postres</h6>
+  <p>  
+    En OnlyFlans, somos un equipo de entusiastas de la repostería con un amor inquebrantable por los postres artesanales. Nuestra misión es endulzar tus momentos especiales con delicias hechas con los ingredientes más frescos y de la más alta calidad. Desde nuestra cocina hasta tu mesa, cada postre es una obra de arte diseñada para deleitar tus sentidos.</p> 
+
+    <h6>Lo Que Ofrecemos</h6> 
+    <p>   
+      Nuestra tienda online está repleta de una variedad exquisita de postres, desde clásicos irresistibles hasta creaciones innovadoras que desafían la imaginación. En nuestro catálogo encontrarás:</p>
+    <div class="container" style="display:flex; justify-content: center;">
+    <div id="carouselExample" class="carousel slide" style=" width: 70%;">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="{% static 'img/tiramisu.png' %}" class="d-block w-100" alt="Postres Artesanales: Elaborados con dedicación y cuidado, cada uno de nuestros postres está hecho a mano para garantizar un sabor auténtico y una calidad excepcional.">
+              <div class="texto" style="position: absolute;bottom: 20px;left: 20px; background: rgba(0, 0, 0, 0.5); color: white;  padding: 10px;  border-radius: 5px;">Postres Artesanales: Elaborados con dedicación y cuidado, cada uno de nuestros postres está hecho a mano para garantizar un sabor auténtico y una calidad excepcional.</div>
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'img/pannacotta.png' %}" class="d-block w-100" alt=" Opciones Personalizables: ¿Tienes una ocasión especial? Personaliza tus postres con mensajes y decoraciones únicas para hacer que cada celebración sea aún más memorable.">
+              <div class="texto" style="position: absolute;bottom: 20px;left: 20px; background: rgba(0, 0, 0, 0.5); color: white;  padding: 10px;  border-radius: 5px;">Opciones Personalizables: ¿Tienes una ocasión especial? Personaliza tus postres con mensajes y decoraciones únicas para hacer que cada celebración sea aún más memorable.</div>
+          </div>
+          <div class="carousel-item">
+              <img src="{% static 'img/frutosrojos.png' %}" class="d-block w-100" alt="Ingredientes de Primera: Utilizamos solo los mejores ingredientes, frescos y naturales, para ofrecerte postres que no solo saben bien, sino que también son elaborados con el mayor respeto por tu salud y bienestar.">
+              <div class="texto" style="position: absolute;bottom: 20px;left: 20px; background: rgba(0, 0, 0, 0.5); color: white;  padding: 10px;  border-radius: 5px;">Ingredientes de Primera: Utilizamos solo los mejores ingredientes, frescos y naturales, para ofrecerte postres que no solo saben bien, sino que también son elaborados con el mayor respeto por tu salud y bienestar.</div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/reparto.png' %}" class="d-block w-100" alt="Envío Confiable: Ofrecemos opciones de envío rápidas y asequibles para que recibas tus postres en perfectas condiciones, justo cuando los necesitas.">
+            <div class="texto" style="position: absolute;bottom: 20px;left: 20px; background: rgba(0, 0, 0, 0.5); color: white;  padding: 10px;  border-radius: 5px;">Envío Confiable: Ofrecemos opciones de envío rápidas y asequibles para que recibas tus postres en perfectas condiciones, justo cuando los necesitas.</div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</div>
+    <h6>Compromiso con la Calidad</h6> 
+    <img src="{% static 'img/calidad.png' %}" class="" alt="calidad">
+    
+    <p>  
+    
+    En OnlyFlans, nos enorgullece ofrecerte productos que superan tus expectativas. Cada postre que elaboramos pasa por rigurosos controles de calidad para asegurar que cada bocado sea una experiencia deliciosa.
+    
+    Gracias por elegir OnlyFlans. Esperamos que disfrutes de nuestros postres tanto como nosotros disfrutamos haciéndolos.
+    
+    ¡Endulza tu día con OnlyFlans! </p>
+</div>
+
+{% endblock %}
